@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'MantouSans';
+    src: url(../font/MantouSans-Regular.woff) format('woff');
+}
+html {
+    scroll-behavior: smooth; 
+}
+html,body{
+    position: relative;
+    background-color: black;
+    z-index: -100;
+    color: white;
+}
+.topContainer{
+    margin: 0px 65px;
+}
+@media screen and (max-width:992px){
+    .topContainer{
+        margin: 0px 20px;
+    }
+}
+section {
+    margin: 40px 0px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s color;
+}
+img {
+    max-width: 100%;
+}
+.persona{
+    background-image: url("../img/1234.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media screen and (max-width:992px){   
+    .persona{
+        display: none;
+    }
+}
+canvas{
+    position: absolute !important;
+    top: 0px;
+    width: 100% !important;
+    height: 100vh !important;
+}
+@media screen and (max-width:992px){
+    canvas{
+        visibility: hidden;
+        display: none;
+    }
+}
+nav{
+    padding: 0px 65px;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+}
+@media screen and (max-width:992px){
+    nav{
+        padding: 0px 20px;
+    }
+}
+nav.scollToTop{
+    bottom: 50px;
+}
+.scollToTop a {
+    font-size: 16px;
+}
+footer{
+    background-color: rgb(24, 24, 24);
+    padding: 30px 65px;
+    color: white;
+}
+@media screen and (max-width:992px){
+    footer{
+        padding: 30px 20px;
+    }
+}
+.mantou{
+    font-family: "MantouSans";
+}
+h1,h2,h3,h4,h5,span,p{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0px;
+}
+.fontHover{
+    color: #8b8b8b !important;
+}
+.fontHover:hover{
+    color: white !important;
+    text-decoration: underline;
+}
+.heading {
+    padding-top:100px;
+}
+@media screen and (max-width:992px) {
+    .heading{
+        padding-top:70px;
+    }    
+}
+.heading h1 {
+    font-size: 90px ;
+    font-weight: 900;
+    letter-spacing: -2px;
+    word-wrap: break-word;
+    color: white;
+}
+@media screen and (max-width:992px) {
+    .heading h1 {
+        font-size: 50px ;
+        letter-spacing: 0px;
+    }    
+}
+@media screen and (max-width:426px) {
+    .heading h1 {
+        font-size: 24px ;
+        letter-spacing: 0px;
+    }    
+}
+.list dl dt h1 a{
+    font-weight: 600;
+}
+.contact dt h1{
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 60px;
+}
+@media screen and (max-width:992px) {
+    .contact dt h1{
+        font-size: 30px;
+        line-height: 40px;
+    }    
+}
+.tagSolid{
+    display: inline-block;
+    background-color: #adadad;
+    padding: 4px 12px;
+    border-radius: 30px;
+    color: black;
+    font-size: 12px;
+    font-weight: 300;
+}
+.tagLine{
+    display: inline-block;
+    border: #BBBBBB solid 1px;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 300;
+}
+.content-title h2{
+    font-size: 44px;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+.content-detail{
+    margin-top: 70px;
+    margin-right: 20px;
+}
+@media screen and (max-width:1200px) {
+    .content-detail{
+        margin: 60px 0px 20px 0px;
+    }
+}
+.content-detail i{
+    font-size: 14px;
+    font-weight:900;
+}
+.content-detail p{
+    color: #a7a7a7;
+    font-size: 14px;
+    font-weight: 400;
+}
+.img-container{
+    overflow: hidden;
+    position: relative;
+}
+.img-hover{
+    transition:all 0.3s !important;
+}
+.img-hover:hover{
+    transform: scale(1.1);
+}
+.img-tag:before{
+    content:attr(data-note);
+    padding: 0px 10px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    z-index: 50;
+    border-radius: 100px;
+    font-size: 14px;
+}
+.img-tag:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    background-image: url(../img/arrowLink.svg);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.7);
+    background-position: 50% 50%;
+    border-radius: 50px;
+    visibility: hidden;
+}
+.img-container:hover .img-tag:after{
+    visibility: visible;
+}
+.marquee-container{
+    position: relative;
+}
+.marquee-container:before{
+    content: "";
+    position: absolute;
+    z-index: 100;
+    background: -webkit-linear-gradient(left, #000000 0%,transparent 20%,transparent 80%,#000000 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.marquee-container{
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.marquee-container h1{
+    white-space: nowrap;
+    animation: marquee-move 15s linear infinite;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+@keyframes marquee-move {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@media screen and (max-width:992px) {
+    .marquee-container h1, .marquee-container span{
+        font-size: 40px;
+    }
+}
+.modal-header{
+    position: fixed;
+    border-bottom: none;
+    top: 20px;
+    right: 20px;
+    z-index: 111;
+}
+.modal .modal-body{
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.modal-body h1, h4{
+    color: white;
+}
+.modal-body h1{
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: -12px;
+    text-shadow: 1px 1px 2px rgb(170, 170, 170);
+}
+.modal-body h4{
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgb(135, 135, 135);
+}
+.modal .modal-body .modal-column{
+    width: 20%;
+    position: relative;
+}
+.modal .modal-body .modal-column img{
+    min-height: 100%; 
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.modal .modal-body .modal-column .modal-column-title{
+    position: absolute;
+    z-index: 101;
+    top: 5px;
+    left: 25px;
+}
+@media screen and (max-width:992px) {
+    .modal-body h1{
+        font-size: 50px;
+        margin-bottom: -0px;
+    }
+    .modal .modal-body .modal-column{
+        width: 100%;
+    }
+    .modal .modal-body .modal-column{
+        width: 100%;
+        height: 20%;
+    }
+}
+.modal-bg {
+    background: url(../img/modal/2-2_interstellar_bg.jpg) no-repeat center center;
+}
